@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Navigation = () => {
 
-    const [menu, setMenu] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+      };
+
   return (
-    <nav className="flex h-20 items-center shadow-md ">
-      <div className="w-full flex max-w[1200px] justify-around  -red-300">
+    <nav className="flex h-20 items-center justify-center shadow-md ">
+      <div className="w-full flex md:max-w-[1220px] xl:max-w-[1220px]  justify-between">
         <span className=" flex items-center gap-2 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +33,12 @@ const Navigation = () => {
             </span>
           </h3>
         </span>
-        <ul className="flex w text-base gap-10 items-center cursor-pointer ">
+        <ul className="md:flex xl:flex hidden text-base font-light gap-10 items-center cursor-pointer ">
           <li className="hover:bg-slate-100 p-3 rounded-full">
             About
             {/* <Link to="/about">About</Link> */}
           </li>
-          <li className="hover:bg-slate-100 p-3 rounded-full">
+          <li className="hover:bg-slate-100 p-3 rounded-full space-x-1">
             Business
             {/* <Link to="/contact">Contact</Link> */}
           </li>
@@ -41,7 +46,7 @@ const Navigation = () => {
             Contact
             {/* <Link to="/help">Help</Link> */}
           </li>
-          <span className="hover:bg-slate-100 relative p-3 rounded-full w-20 flex items-center justify-center border border-slate-200">
+          <span onClick={toggleMenu} className="hover:bg-slate-100 relative p-3 rounded-full w-20 flex items-center justify-center border border-slate-200">
               <svg setMenu={true}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -56,13 +61,15 @@ const Navigation = () => {
                   d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
                 />
               </svg>
-              <span className="w-64  bg-white shadow-md absolute top-[60px] z-10 rounded-md flex items-start p-5">
-                <ul className="flex flex-col items-start gap-5">
+              {isOpen && (
+                <span className="w-64  bg-white shadow-md absolute top-[60px] z-10 rounded-md flex items-start p-3">
+                <ul className="flex flex-col items-start gap-3 text-base">
                     <li className="hover:bg-slate-100 rounded-full w-52 pl-4 p-2 text-start">Add Business</li>
                     <li className="hover:bg-slate-100 rounded-full w-52 pl-4 p-2 text-start">Log In</li>
                     <li className="hover:bg-slate-100 rounded-full w-52 pl-4 p-2 text-start">Help</li>
                 </ul>
               </span>
+              )}
             </span>
         </ul>
        
