@@ -9,7 +9,7 @@ const Navigation = () => {
       };
 
   return (
-    <nav className="flex h-20 items-center justify-center shadow-md ">
+    <nav className="flex h-20 p-5 items-center justify-center shadow-md ">
       <div className="w-full flex md:max-w-[1220px] xl:max-w-[1220px]  justify-between">
         <span className=" flex items-center gap-2 cursor-pointer">
           <svg
@@ -28,12 +28,14 @@ const Navigation = () => {
           </svg>
           <h3 className="flex flex-col items-start font-medium  text-seablue text-xl">
             BooKRetreats
-            <span className="text-gray-500 text-sm">
+            <span className="text-gray-500 text-xs xl:text-sm md:text-sm">
               World's #1 Retreat Site
             </span>
           </h3>
         </span>
-        <ul className="md:flex xl:flex hidden text-base font-light gap-10 items-center cursor-pointer ">
+
+    <div className="flex gap-10">
+    <ul className="hidden md:flex xl:flex text-base font-light gap-10 items-center cursor-pointer ">
           <li className="hover:bg-slate-100 p-3 rounded-full">
             About
             {/* <Link to="/about">About</Link> */}
@@ -46,7 +48,9 @@ const Navigation = () => {
             Contact
             {/* <Link to="/help">Help</Link> */}
           </li>
-          <span onClick={toggleMenu} className="hover:bg-slate-100 relative p-3 rounded-full w-20 flex items-center justify-center border border-slate-200">
+         
+        </ul>
+        <span onClick={toggleMenu} className="hover:bg-slate-100 relative p-3 rounded-full w-20 flex items-center justify-center border border-slate-200">
               <svg setMenu={true}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -71,7 +75,7 @@ const Navigation = () => {
               </span>
               )}
             </span>
-        </ul>
+    </div>
        
        
       </div>
