@@ -66,8 +66,8 @@ const Navigation = () => {
                 />
               </svg>
               {isOpen && (
-                <span className="w-64  bg-white shadow-md absolute top-[60px] z-10 rounded-md flex items-start p-3">
-                <ul className="flex flex-col items-start gap-3 text-base">
+                <span className="w-60  bg-white shadow-md absolute top-[60px] -left-48 z-10 rounded-md flex items-start p-2">
+                <ul className="flex flex-col items-start gap-2 text-base">
                     <li className="hover:bg-slate-100 rounded-full w-52 pl-4 p-2 text-start">Add Business</li>
                     <li className="hover:bg-slate-100 rounded-full w-52 pl-4 p-2 text-start">Log In</li>
                     <li className="hover:bg-slate-100 rounded-full w-52 pl-4 p-2 text-start">Help</li>
