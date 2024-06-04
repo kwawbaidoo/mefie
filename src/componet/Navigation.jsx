@@ -51,7 +51,7 @@ const Navigation = () => {
          
         </ul>
         <span onClick={toggleMenu} className="hover:bg-slate-100 relative p-3 rounded-full w-20 flex items-center justify-center border border-slate-200">
-              <svg setMenu={true}
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
