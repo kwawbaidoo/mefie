@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import mefie_logo from '../assets/mefie_logo.png'
 const Navigation = () => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -12,26 +13,8 @@ const Navigation = () => {
     <nav className="flex h-20 p-5 items-center justify-center shadow-md ">
       <div className="w-full flex md:max-w-[1220px] xl:max-w-[1220px]  justify-between">
         <span className=" flex items-center gap-2 cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="#2896fe"
-            className="size-10"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
-            />
-          </svg>
-          <h3 className="flex flex-col items-start font-medium  text-seablue text-xl">
-            BooKRetreats
-            <span className="text-gray-500 text-xs xl:text-sm md:text-sm">
-              World's #1 Retreat Site
-            </span>
-          </h3>
+            <img className="h-10" src={mefie_logo} alt="MefieLogo" />
+          
         </span>
 
     <div className="flex gap-10">
